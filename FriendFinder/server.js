@@ -7,6 +7,7 @@ var apiRoutes = require('./app/routing/apiRoutes.js');
 var app = express();
 var PORT = 3500;
 
+app.use('/static', express.static(path.join(__dirname, './app/public')))
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
